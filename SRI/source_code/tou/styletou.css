@@ -1,0 +1,83 @@
+/* ── CONTENT SECTION ── */
+.tou-section {
+  position: relative;
+  background: var(--cream);
+  padding: 80px 60px 100px;
+}
+
+.tou-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 60px; right: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--red) 0%, transparent 100%);
+}
+
+.tou-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* ── CONTENT BLOCKS ── */
+.tou-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.tou-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tou-heading {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red-deep);
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(160,18,18,0.15);
+}
+
+.tou-block p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.9;
+  color: var(--text-mid);
+}
+
+/* ── CTA LINK ── */
+.tou-cta {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--red);
+  text-decoration: none;
+  padding: 12px 28px;
+  border: 1px solid var(--red);
+  transition: background 0.25s, color 0.25s;
+  align-self: flex-start;
+}
+
+.tou-cta:hover {
+  background: transparent;
+  color: var(--red);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .tou-section { padding: 60px 24px 80px; }
+  .tou-section::before { left: 24px; right: 24px; }
+  .tou-inner { gap: 40px; }
+}

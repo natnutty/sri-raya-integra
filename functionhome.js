@@ -17,4 +17,11 @@ const navbar = document.getElementById('navbar');
         }
       });
     }, { threshold: 0.15 });
-    fadeEls.forEach(el => observer.observe(el));
+fadeEls.forEach(el => observer.observe(el));
+    
+const toggle = document.getElementById("menuToggle");
+const menu = document.getElementById("mobileMenu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});

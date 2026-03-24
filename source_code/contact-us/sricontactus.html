@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us — Sri Raya Integra</title>
+  <link rel="icon" type="image/x-icon" href="../../assets/sri-logo.png">
+  <link rel="stylesheet" href="../../global.css" />
+  <link rel="stylesheet" href="stylecus.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="left-navbar">
+      <a href="../../index.html">
+        <img src="../../assets/sri-logo.png" alt="Sri Raya Integra" />
+      </a>
+      <span class="brand">
+        <a href="../../index.html">Sri Raya Integra</a>
+      </span>
+    </div>
+    <div class="nav-right">
+      <a href="../../index.html#services" class="nav-btn">Services</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-inner">
+      <div class="section-label anim-1">Get In Touch</div>
+      <h1 class="page-hero-title anim-2">Contact Us</h1>
+      <p class="page-hero-sub anim-3">For services inquiry, please fill out the form below.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM SECTION -->
+  <section class="form-section">
+    <div class="form-section-inner">
+
+      <form class="form-box anim-form" id="contactForm">
+
+        <!-- NAME -->
+        <div class="field-row">
+          <div class="field-group">
+            <label>First Name <span class="required">*</span></label>
+            <input type="text" id="fname" class="input" placeholder="Your first name..." />
+            <small class="error-msg"></small>
+          </div>
+          <div class="field-group">
+            <label>Last Name <span class="required">*</span></label>
+            <input type="text" id="lname" class="input" placeholder="Your last name..." />
+            <small class="error-msg"></small>
+          </div>
+        </div>
+
+        <!-- EMAIL & PHONE -->
+        <div class="field-row">
+          <div class="field-group">
+            <label>Email <span class="required">*</span></label>
+            <input type="text" id="email" class="input" placeholder="Your email..." />
+            <small class="error-msg"></small>
+          </div>
+          <div class="field-group">
+            <label>Phone <span class="required">*</span></label>
+            <input type="text" id="phone" class="input" placeholder="Your phone number..." />
+            <small class="error-msg"></small>
+          </div>
+        </div>
+
+        <!-- INQUIRY & ORGANIZATION -->
+        <div class="field-row">
+          <div class="field-group">
+            <label>Inquiry Category <span class="required">*</span></label>
+            <select class="input" id="cat">
+              <option value="" selected hidden>Select your inquiry...</option>
+              <option value="Corporate Services & Compliance">Corporate Services &amp; Compliance</option>
+              <option value="Accounting Services">Accounting Services</option>
+              <option value="Strategic Advisory">Strategic Advisory</option>
+              <option value="Other Inquiry">Other Inquiry</option>
+            </select>
+            <small class="error-msg"></small>
+          </div>
+          <div class="field-group">
+            <label>Company <span class="required">*</span></label>
+            <input type="text" id="org" class="input" placeholder="Your company..." />
+            <small class="error-msg"></small>
+          </div>
+        </div>
+
+        <!-- MESSAGE -->
+        <div class="field-group full">
+          <label>Message <span class="required">*</span></label>
+          <textarea id="message" class="input message-input" placeholder="Leave your message..."></textarea>
+          <small class="error-msg"></small>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="submit-row">
+          <button type="submit" class="send-btn">Send Message &nbsp;→</button>
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../../index.html" class="footer-brand">Sri Raya Integra</a>
+      </div>
+      <div class="footer-meta">
+        <a href="https://maps.app.goo.gl/XMBJzPFrLYJWzJzW9" target="_blankl" rel="noopener noreferrer">#28-A, Equity Tower · SCBD, Jakarta</a>
+        <a href="../tou/sritou.html">Terms of Use</a>
+      </div>
+      <div class="footer-copy">© 2025 PT Sri Raya Integra. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- CUSTOM ALERT -->
+  <div id="customAlert" class="custom-alert">
+    <div class="alert-box">
+      <p id="alertMessage"></p>
+      <button onclick="closeAlert()">OK</button>
+    </div>
+  </div>
+
+  <script src="functioncus.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({ publicKey: "jRytMkaCSDZqGWnJS" });
+    })();
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+
+</body>
+</html>

@@ -128,64 +128,6 @@ button:focus-visible {
   color: var(--red);
 }
 
-/* ── MOBILE NAV ── */
-.menu-toggle {
-  display: none;
-  font-size: 22px;
-  cursor: pointer;
-  color: var(--red);
-}
-
-/* Mobile dropdown */
-.mobile-menu {
-  position: fixed;
-  top: 72px;
-  right: 0;
-  left: 0;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 24px;
-  transform: translateY(-120%);
-  transition: transform 0.3s ease;
-  z-index: 99;
-}
-
-.mobile-menu a {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--text-dark);
-}
-
-/* Active state */
-.mobile-menu.active {
-  transform: translateY(0);
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  .nav-right {
-    display: none; /* hide desktop menu */
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar {
-    padding: 16px 20px;
-  }
-
-  .navbar img {
-    width: 48px;
-  }
-
-  .navbar .brand a {
-    font-size: 11px;
-  }
-}
 
 /* ── PAGE HERO (contact us & terms of use) ── */
 .page-hero {

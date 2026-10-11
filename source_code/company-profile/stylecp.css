@@ -306,39 +306,6 @@
   color: var(--text-mid);
 }
 
-/* ── CLIENTS ── */
-.cp-clients {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  background: var(--cream);
-  border: 2px solid var(--cream);
-}
-
-.cp-client {
-  background: #ffffff;
-  height: 130px;
-  padding: 26px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cp-client img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.8;
-  transition: filter 0.35s, opacity 0.35s, transform 0.35s;
-}
-
-.cp-client:hover img {
-  filter: grayscale(0);
-  opacity: 1;
-  transform: scale(1.05);
-}
-
 /* ── CTA ── */
 .cp-cta {
   position: relative;

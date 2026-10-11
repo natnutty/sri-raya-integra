@@ -282,3 +282,18 @@ button:focus-visible {
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
   .footer-meta { flex-direction: column; gap: 10px; }
 }
+
+/* ── RESPONSIVE: compact navbar on phones (fits logo + 3 items) ── */
+@media (max-width: 640px) {
+  .navbar { padding: 12px 14px; }
+  .left-navbar { gap: 8px; }
+  .navbar img { width: 40px; }
+  .navbar .brand a { font-size: 10px; letter-spacing: 0.1em; }
+  .nav-right { gap: 12px; }
+  .nav-link { font-size: 10px; letter-spacing: 0.05em; }
+  .nav-btn { font-size: 10px; letter-spacing: 0.06em; padding: 8px 12px; }
+}
+
+@media (max-width: 350px) {
+  .navbar .brand { display: none; }
+}
